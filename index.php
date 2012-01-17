@@ -37,6 +37,7 @@
 	$zoom = 2;
 	$anim = "6,7";
 	$speed = 0.3;
+	$bg = "#000000";
 	
 	if(isset($_GET["s"])){
 		$sheet = $_GET["s"];
@@ -45,6 +46,7 @@
 		$zoom = $_GET["z"];
 		$anim = $_GET["a"];
 		$speed = $_GET["sp"];
+		$bg = $_GET["bg"];
 	}
 	
 	 ?>
@@ -78,6 +80,9 @@
 	<label for="animSpeed">animationspeed</label><br />
 	<input type="text" name="" value="<?php echo $speed; ?>" id="animSpeed"/>
 	<br />
+	<label for="bg">BackgroundColor</label><br />
+	<input type="text" name="" value="#<?php echo $bg; ?>" id="bg"/>
+	<br />
 	<br />
 	<button id="apply">Apply</button>
 	<br />
@@ -101,6 +106,7 @@
 		var height = rawHeight*3;
 		var zoom = $("#z").val();
 		var img = $("#sprite").val();
+		var bg = $("#bg").val();
 		
 		var animationFrames = $("#anim").val();
 		var animationSpeed = $("#animSpeed").val();
