@@ -37,7 +37,7 @@
 	$zoom = 2;
 	$anim = "6,7";
 	$speed = 0.3;
-	$bg = "#000000";
+	$bg = "000000";
 	
 	if(isset($_GET["s"])){
 		$sheet = $_GET["s"];
